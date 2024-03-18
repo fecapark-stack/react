@@ -2,12 +2,30 @@
 
 React utilities for fast coding.
 
+## Install & Import
+
+```
+npm install @fecapark-stack/react
+```
+
+```
+yarn add @fecapark-stack/react
+```
+
+then,
+
+```tsx
+import { ... } from "@fecapark-stack/react";
+```
+
+<br />
+
 ## IconWrapper
 
 Use for **centerize icon.**  
 Recommend [`react-icons`](https://www.npmjs.com/package/react-icons) for here.
 
-### Usage - Basic
+### Usage
 
 ```tsx
 import { IconWrapper } from "@fecapark-stack/react";
@@ -17,9 +35,7 @@ import { IconWrapper } from "@fecapark-stack/react";
 </IconWrapper>;
 ```
 
-### Usage - Styling
-
-- Use `style` props.
+- For styling, use `style` props.
 
 ```tsx
 import { IconWrapper } from "@fecapark-stack/react";
@@ -29,7 +45,7 @@ import { IconWrapper } from "@fecapark-stack/react";
 </IconWrapper>;
 ```
 
-- In `Tailwind`,
+- Or in `Tailwind`,
 
 ```tsx
 import { IconWrapper } from "@fecapark-stack/react";
