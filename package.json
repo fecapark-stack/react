@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "@fecapark-stack/react",
   "description": "React utilities for fast coding.",
   "version": "0.0.1",
   "type": "module",
