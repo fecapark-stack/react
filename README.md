@@ -2,14 +2,12 @@
 
 React utilities for fast coding.
 
-## React
+## IconWrapper
 
-### IconWrapper
-
-Use for centerize icon.  
+Use for **centerize icon.**  
 Recommend [`react-icons`](https://www.npmjs.com/package/react-icons) for here.
 
-#### Usage - Basic
+### Usage - Basic
 
 ```tsx
 import { IconWrapper } from "@fecapark-stack/react";
@@ -19,7 +17,7 @@ import { IconWrapper } from "@fecapark-stack/react";
 </IconWrapper>;
 ```
 
-#### Usage - Styling
+### Usage - Styling
 
 - Use `style` props.
 
