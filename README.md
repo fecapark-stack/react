@@ -68,7 +68,7 @@ This slider's width size is browser's screen width(default, can customize max wi
 
 ### demo
 
-![fullslider](https://github.com/fecapark/blog/assets/101973955/35d5c7fa-fa1c-4e98-a2ef-8b46d38209c8)
+![fullslider](https://github.com/fecapark/metaball-interaction/assets/101973955/950032a1-8d86-48f1-ae81-73cd10ef46ac)
 
 ### Usage
 
@@ -121,7 +121,7 @@ Use for optimize sequential form contents.
 Simple implementation of `@toss/slash/useFunnel`.
 
 - references below
-- [docs](https://www.slash.page/ko/libraries/react/use-funnel/readme.i18n/)
+- [docs](https://www.slash.page/libraries/react/use-funnel/readme.i18n/)
 - [github](https://github.com/toss/slash/blob/main/packages/react/use-funnel/src/useFunnel.tsx)
 
 ### Usage
