@@ -1,10 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { IconWrapper } from "./lib";
+import { IconWrapper, FullSlider } from "./lib";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <>
+      <FullSlider
+        cols={3}
+        items={[
+          <div>1</div>,
+          <div>2</div>,
+          <div>3</div>,
+          <div>4</div>,
+          <div>5</div>,
+        ]}
+      />
       <IconWrapper
         style={{
           width: 100,
