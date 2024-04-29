@@ -4,9 +4,9 @@ import { useSliderPhysics } from "./hooks/useSliderPhysics";
 import useStage from "./hooks/useStage";
 
 interface SliderStyleProps {
-  inActiveOpacity: number;
-  gap: number;
-  maxContainerWidth: number;
+  inActiveOpacity?: number;
+  gap?: number;
+  maxContainerWidth?: number;
 }
 
 interface SliderProps {
@@ -23,13 +23,13 @@ const ITEM_CONTAINER_TRANSITION_STYLE =
 export default function Slider({
   items,
   cols,
-  style = { inActiveOpacity: 0.5, gap: 48, maxContainerWidth: Infinity },
+  style: { inActiveOpacity = 0.5, gap = 48, maxContainerWidth = Infinity } = {},
 }: SliderProps) {
   const { stageWidth } = useStage();
   const calcSliderSizes = useCalcSliderSizes({
     itemAmount: items.length,
     cols,
-    maxContainerWidth: style.maxContainerWidth,
+    maxContainerWidth: maxContainerWidth,
   });
   const {
     parameterRef,
@@ -40,7 +40,7 @@ export default function Slider({
   } = useSliderPhysics({
     itemAmount: items.length,
     cols,
-    maxContainerWidth: style.maxContainerWidth,
+    maxContainerWidth: maxContainerWidth,
   });
 
   const [isItemSetted, setIsItemSetted] = useState(false);
@@ -59,7 +59,7 @@ export default function Slider({
         <div
           style={{
             width: itemWidth,
-            opacity: isSelected ? 1 : style.inActiveOpacity,
+            opacity: isSelected ? 1 : inActiveOpacity,
             transition: "opacity 0.25s cubic-bezier(0.2, 0, 0, 1)",
             userSelect: "none",
           }}
@@ -69,7 +69,7 @@ export default function Slider({
         </div>
       );
     });
-  }, [itemWidth, items, cols, interactionState, style.inActiveOpacity]);
+  }, [itemWidth, items, cols, interactionState, inActiveOpacity]);
 
   const onDragDown = (e: React.PointerEvent) => {
     if (!itemContainerRef.current) return;
@@ -174,7 +174,7 @@ export default function Slider({
             ref={itemContainerRef}
             style={{
               display: "flex",
-              gap: `${style.gap}px`,
+              gap: `${gap}px`,
               transition: ITEM_CONTAINER_TRANSITION_STYLE,
               opacity: isItemSetted ? "" : 0,
             }}

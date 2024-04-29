@@ -54,3 +54,54 @@ import { IconWrapper } from "@fecapark-stack/react";
   <svg>...</svg>
 </IconWrapper>;
 ```
+
+<br />
+
+## FullSlider
+
+Use for slide items.  
+This slider's width size is browser's screen width(default, can customize max width).
+
+### demo
+
+![fullslider](https://github.com/fecapark/blog/assets/101973955/35d5c7fa-fa1c-4e98-a2ef-8b46d38209c8)
+
+### Usage
+
+```tsx
+import { FullSlider } from "@fecapark-stack/react";
+
+const items = [
+  <div>1</div>,
+  <div>2</div>,
+  <div>3</div>,
+  <div>4</div>,
+  <div>5</div>,
+];
+
+<FullSlider items={items} cols={3} />;
+```
+
+- For styling, use `style` props.
+
+```tsx
+import { IconWrapper } from "@fecapark-stack/react";
+
+<FullSlider
+  items={items}
+  cols={3}
+  style={{
+    inActiveOpacity: 0.5,
+    gap: 24,
+    maxContainerWidth: 1200,
+  }}
+/>;
+```
+
+- `style` props (all props are optional)
+
+| name              | description                                 | type            | default value |
+| ----------------- | ------------------------------------------- | --------------- | ------------- |
+| inActiveOpacity   | Opacity value of not focused items.         | `number`        | `0.5`         |
+| gap               | Gap size between slider items.              | `number(pixel)` | `48(px)`      |
+| maxContainerWidth | Max slider view width about window resizing | `number(pixel)` | `Infinity`    |

@@ -2,18 +2,45 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { IconWrapper, FullSlider } from "./lib";
 
+function Item({ text }: { text: string }) {
+  return (
+    <div
+      style={{
+        height: 300,
+        backgroundColor: "#e2e2e2",
+        borderRadius: 24,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: 48,
+        fontWeight: "bold",
+        color: "#00000033",
+      }}
+    >
+      {text}
+    </div>
+  );
+}
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <>
       <FullSlider
         cols={3}
         items={[
-          <div>1</div>,
-          <div>2</div>,
-          <div>3</div>,
-          <div>4</div>,
-          <div>5</div>,
+          <Item key="1" text="1" />,
+          <Item key="2" text="2" />,
+          <Item key="3" text="3" />,
+          <Item key="4" text="4" />,
+          <Item key="5" text="5" />,
+          <Item key="6" text="6" />,
+          <Item key="7" text="7" />,
+          <Item key="8" text="8" />,
         ]}
+        style={{
+          inActiveOpacity: 0.3,
+          maxContainerWidth: 1500,
+        }}
       />
       <IconWrapper
         style={{
