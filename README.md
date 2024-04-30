@@ -70,7 +70,7 @@ This slider's width size is browser's screen width(default, can customize max wi
 
 ### demo
 
-![fullslider](https://github.com/fecapark/metaball-interaction/assets/101973955/950032a1-8d86-48f1-ae81-73cd10ef46ac)
+![326329434-950032a1-8d86-48f1-ae81-73cd10ef46ac-min](https://github.com/fecapark-stack/react/assets/101973955/9f84a069-7a73-495f-a461-2c331d23455d)
 
 ### Usage
 
